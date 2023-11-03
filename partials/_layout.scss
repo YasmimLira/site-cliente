@@ -246,7 +246,7 @@
 
 @media screen and (max-width: 768px){
     .lanche-stick img {
-        max-width: 700px;
+        max-width: 400px;
     }
 }
 
@@ -270,6 +270,13 @@
     display: flex;
     gap: 8px;
     color: $white-normal;
+}
+
+@media screen and (max-width: 768px){
+    .footer p {
+        text-align: center;
+        font-size: 13px;
+    }
 }
 
 // Botao whatsapp ---------------------------------------
@@ -339,26 +346,16 @@
 
 .scrollToTopButton:hover {
     transform: scale(1.1);
+    animation: translateY 0.8s infinite alternate;
 }
 
-.scrollToTopButton .tooltip-text {
-    visibility: hidden;
-    position: absolute;
-    width: 200px;
-    top: -8px;
-    left: 50px;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    background-color: $black-normal;
-    color: $white-normal;
-    opacity: 0;
-    transition: opacity 0.4s;
-}
-
-.scrollToTopButton:hover .tooltip-text{
-    visibility: visible;
-    opacity: 1;
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
 }
 
 @media screen and (max-width: 768px){
