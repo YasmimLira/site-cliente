@@ -131,9 +131,36 @@
   }
 }
 
+#btnLeiaMais {
+  padding: 10px 18px;
+  color: $white-normal;
+  background-color: $red-normal;
+  border: 0;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+#btnLeiaMais:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
 @media screen and (max-width: 758px) {
   .about-content {
     flex-direction: column;
+  }
+  #mais {
+    display: none;
   }
 }
 
