@@ -95,7 +95,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.5), #06121e), url("img/bg-site.jpg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.5), #06121e), url("../img/bg-site.jpg");
   left: 0;
   top: 0;
   width: 100%;
@@ -223,11 +223,22 @@ i {
     transform: scale(1.07);
   }
 }
-@media screen and (max-width: 758px) {
+@media screen and (min-width: 769px) {
+  #mais {
+    display: none;
+  }
+  #pontos {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
   }
   #mais {
+    display: none;
+  }
+  #pontos {
     display: none;
   }
 }
@@ -255,6 +266,13 @@ i {
   max-width: 780px;
 }
 
+@media screen and (max-width: 768px) {
+  .services-content p {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 30px;
+  }
+}
 .lanches {
   display: flex;
   justify-content: center;
@@ -271,6 +289,8 @@ i {
   border-radius: 8px;
   box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 .lanche img {
   width: 100%;
@@ -278,9 +298,28 @@ i {
   transition: transform 0.2s;
 }
 
-.lanche img:hover {
+.lanche:hover img {
   transform: scale(1.2);
   z-index: 1;
+}
+
+.lanche .conteudo-back {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+  padding: 20px;
+  z-index: 99;
+}
+
+.lanche:hover .conteudo-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lanche-info {
@@ -310,6 +349,8 @@ i {
   }
 }
 .lanche-stick {
+  background-color: #06121e;
+  color: #FFF;
   max-width: 100%;
   flex: 1;
   display: flex;
@@ -323,18 +364,83 @@ i {
 }
 .lanche-stick p {
   text-align: center;
-  margin: 14px 0;
+  margin: 20px 0;
+  padding: 50px 0;
   margin-bottom: 30px;
+  font-size: 20px;
 }
 .lanche-stick img {
-  width: 500px;
+  width: 900px;
 }
 
 @media screen and (max-width: 768px) {
   .lanche-stick img {
-    max-width: 300px;
+    max-width: 330px;
+  }
+  .lanche-stick p {
+    font-size: 14px;
+    margin: 20px 0;
+    padding: 10px 0;
   }
 }
+#testimonials {
+  background-color: #FFF;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+#testimonials .container-feed {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#testimonials .testimonials-slider {
+  position: relative;
+  overflow: hidden;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide {
+  text-align: center;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item .testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 15px;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item h4 {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 8px;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item .stars {
+  margin-bottom: 8px;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item .stars span {
+  font-size: 20px;
+  color: #ffd700;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+#testimonials .testimonials-slider .swiper-wrapper .swiper-slide .testimonial-item .quote-icon {
+  font-size: 24px;
+  color: #e44d26;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -440,6 +546,14 @@ i {
     font-size: 15px;
   }
 }
+.uw-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
