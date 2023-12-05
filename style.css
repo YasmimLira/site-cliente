@@ -95,7 +95,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.5), #06121e), url("./img/bg-site.jpg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.5), #06121e), url("/img/bg-site.jpg");
   left: 0;
   top: 0;
   width: 100%;
