@@ -184,7 +184,7 @@ i {
   padding: 34px 14px 64px 14px;
 }
 .about-content img {
-  max-width: 350px;
+  max-width: 800px;
 }
 
 .about-content div {
@@ -235,6 +235,9 @@ i {
   .about-content {
     flex-direction: column;
   }
+  .about-content img {
+    max-width: 450px;
+  }
   #mais {
     display: none;
   }
@@ -260,10 +263,12 @@ i {
 }
 
 .services-content p {
-  line-height: 150%;
+  line-height: 120%;
   margin-bottom: 14px;
   text-align: center;
   max-width: 780px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -310,9 +315,17 @@ i {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FFF;
+  color: #FFF;
+  background-color: #D94140;
   padding: 20px;
   z-index: 99;
+}
+.lanche .conteudo-back strong {
+  font-size: 20px;
+}
+.lanche .conteudo-back p {
+  margin-top: 10px;
+  text-align: center;
 }
 
 .lanche:hover .conteudo-back {
@@ -363,11 +376,11 @@ i {
   margin-bottom: 14px;
 }
 .lanche-stick p {
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 20px;
   text-align: center;
-  margin: 20px 0;
-  padding: 50px 0;
-  margin-bottom: 30px;
-  font-size: 20px;
+  max-width: 800px;
 }
 .lanche-stick img {
   width: 900px;
